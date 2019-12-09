@@ -95,7 +95,10 @@ public class Main {
 }
 
 /*
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac904fd537c4653da4fd55ce06e4477fdf431fa1
 class HelloWorld {
     //private int sum = 0;   //次数验证
     private int flag = 0;
@@ -129,5 +132,9 @@ class HelloWorld {
     }
 
 }
+<<<<<<< HEAD
 
  */
+=======
+ */
+>>>>>>> ac904fd537c4653da4fd55ce06e4477fdf431fa1
