@@ -1,36 +1,52 @@
 package nosae;
 
 import java.util.Scanner;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
 
 class HelloWorld {
-    //private int sum = 0;   //次数验证
-    private int flag = 0;
+
+    private ReentrantLock lock = new ReentrantLock();
+    Condition conditionH = lock.newCondition();
+    Condition conditionW = lock.newCondition();
+    private int flag = 1;
     private int n;
+
     public HelloWorld( int n){
         this.n = n;
     }
-    public synchronized void hello() throws InterruptedException{
+
+    public void hello() throws InterruptedException{
         for (int i = 0; i < n; i++) {
-            if(flag == 0)
-            {
-                //System.out.print( (++sum) + "   ");   //次数验证
+            try{
+                lock.lock();
+                if(flag != 1)
+                {
+                    conditionH.await();//H等待
+                }
                 System.out.print("Hello");
-                flag = 1;
-                notifyAll();
+                flag = 2;
+                conditionW.signal();//W激活
+            }finally{
+                lock.unlock();
             }
-            wait();
         }
     }
 
-    public synchronized void world() throws InterruptedException{
+    public void world() throws InterruptedException{
         for (int i = 0; i < n; i++) {
-            if(flag == 1)
-            {
+            try{
+                lock.lock();
+                if(flag != 2)
+                {
+                    conditionW.await();//W等待
+                }
                 System.out.println("World!");
-                flag = 0;
-                notifyAll();
+                flag = 1;
+                conditionH.signal();//H激活
+            }finally{
+                lock.unlock();
             }
-            wait();
         }
     }
 
@@ -78,3 +94,38 @@ public class Main {
     }
 }
 
+/*
+class HelloWorld {
+    //private int sum = 0;   //次数验证
+    private int flag = 0;
+    private int n;
+    public HelloWorld( int n){
+        this.n = n;
+    }
+    public synchronized void hello() throws InterruptedException{
+        for (int i = 0; i < n; i++) {
+            if(flag == 0)
+            {
+                //System.out.print( (++sum) + "   ");   //次数验证
+                System.out.print("Hello");
+                flag = 1;
+                notifyAll();
+            }
+            wait();
+        }
+    }
+
+    public synchronized void world() throws InterruptedException{
+        for (int i = 0; i < n; i++) {
+            if(flag == 1)
+            {
+                System.out.println("World!");
+                flag = 0;
+                notifyAll();
+            }
+            wait();
+        }
+    }
+
+}
+ */
