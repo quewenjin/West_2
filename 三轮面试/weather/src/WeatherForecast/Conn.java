@@ -14,7 +14,7 @@ public class Conn {
         String driver="com.mysql.cj.jdbc.Driver";
         String url="jdbc:mysql://127.0.0.1:3306/weather?&useSSL=false&serverTimezone=GMT%2B8";
         String user="root";
-        String password="Qwj1605260500";
+        String password="";//这个就删了吧
         Connection con = null;
 
         try {
