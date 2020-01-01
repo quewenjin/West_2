@@ -26,10 +26,11 @@
   </component>
   <component name="ProjectId" id="1VH22aZelpJNKCDZclfbnzWybXb" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java/JDOM" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java/excel读写jar包（POI+JXL）" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
@@ -44,39 +45,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ForecastsTest">
-    <configuration name="AppTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WeatherForecast.AppTest" />
-      <module name="weather" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="WeatherForecast.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Test">
     <configuration name="ForecastsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="WeatherForecast.ForecastsTest" />
       <module name="weather" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="WeatherForecast.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Iputil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="geturl.Iputil" />
-      <module name="weather" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="geturl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,8 +72,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeatherUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WeatherForecast.WeatherUtils" />
+    <configuration name="QueryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WeatherForecast.QueryTest" />
+      <module name="weather" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WeatherForecast.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadExcel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WeatherForecast.ReadExcel" />
+      <module name="weather" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WeatherForecast.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WeatherForecast.Test" />
       <module name="weather" />
       <extension name="coverage">
         <pattern>
@@ -112,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ForecastsTest" />
-        <item itemvalue="Application.WeatherUtils" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.QueryTest" />
         <item itemvalue="Application.JsonTest" />
-        <item itemvalue="Application.Iputil" />
-        <item itemvalue="Application.AppTest" />
+        <item itemvalue="Application.ForecastsTest" />
+        <item itemvalue="Application.ReadExcel" />
       </list>
     </recent_temporary>
   </component>

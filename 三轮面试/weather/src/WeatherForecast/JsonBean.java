@@ -2,6 +2,10 @@ package WeatherForecast;
 
 import java.util.List;
 
+/**
+ * 对应数据库更新功能
+ */
+
 public class JsonBean {
 
     private String status;

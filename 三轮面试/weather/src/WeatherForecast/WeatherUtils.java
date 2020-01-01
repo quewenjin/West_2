@@ -16,17 +16,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 通过get请求向网站https://restapi.amap.com/v3/weather/weatherInfo?
- * parameters获取某个城市的天气状况数据数据Json
- */
-
 public class WeatherUtils {
 
+    /**
+     * 通过get请求向网站https://restapi.amap.com/v3/weather/weatherInfo?parameters
+     * 获取某个城市的四天的天气预报数据 Json
+     */
     // city 为对应的编码 --> adcode
     public static String GetWeatherData(String city) {
         StringBuilder sb = new StringBuilder();
-        ;
         try {
             // city = URLEncoder.encode(city, "UTF-8");
 
@@ -62,7 +60,11 @@ public class WeatherUtils {
         return json;
     }
 
-    public static void Iputil(String city) throws SQLException {
+    /**
+     * 得到 Json 后进行处理
+     * 存入数据库
+     */
+    public static void CastIputil(String city) throws SQLException {
         WeatherForecast.JsonBean jsonBean = new WeatherForecast.JsonBean();
 
         // 得到 json 部分
@@ -107,6 +109,7 @@ public class WeatherUtils {
         WeatherForecast.Conn c = new WeatherForecast.Conn(); // 连接数据库
         Connection con = c.getConn();
         Statement sql = con.createStatement();
+
         // ResultSet res;
         try {
 

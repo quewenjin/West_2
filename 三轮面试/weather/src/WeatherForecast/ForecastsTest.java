@@ -1,14 +1,26 @@
 package WeatherForecast;
 
+import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
-import static WeatherForecast.WeatherUtils.Iputil;
+import static WeatherForecast.WeatherUtils.CastIputil;
 
 public class ForecastsTest {
 
-    public static void main(String[] args) throws SQLException {
+    //public static void main(String[] args) throws SQLException {
+    public static void Forecast() throws SQLException {
 
+        //清空数据库
+        WeatherForecast.Conn c = new WeatherForecast.Conn(); // 连接数据库
+        Connection con = c.getConn();
+        String sql="delete from forecast where week > 0";//生成一条sql语句
+        Statement stmt=con.createStatement();//创建Statement对象
+        stmt.executeUpdate(sql);//执行sql语句
+        con.close();
+
+        //更新数据库
         ArrayList<String> cityArray = new ArrayList<String> ();
         cityArray.add("110100");//北京市市辖区
         cityArray.add("120100");//天津市市辖区
@@ -41,13 +53,10 @@ public class ForecastsTest {
         cityArray.add("630100");//青海省西宁市
         cityArray.add("640100");//宁夏省银川市
         cityArray.add("650100");//新疆省乌鲁木齐市
-
         for(int i = 0; i < cityArray.size(); i++) {
-            Iputil(cityArray.get(i));
+            CastIputil(cityArray.get(i));
         }
-
-        System.out.println("全国各省的省会及各个直辖市的四天的预报天气已导入数据库！");
-
+        //System.out.println("全国各省的省会及各个直辖市的四天的预报天气已导入数据库！");
     }
 
 }

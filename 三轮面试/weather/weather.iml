@@ -52,5 +52,18 @@
         <jarDirectory url="file://$MODULE_DIR$/../../Java/JDOM" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../Java/excel读写jar包（POI+JXL）" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../Java/excel读写jar包（POI+JXL）" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../../Java/excel读写jar包（POI+JXL）" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../Java/excel读写jar包（POI+JXL）" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>
